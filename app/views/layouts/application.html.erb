@@ -12,21 +12,16 @@
   <body>
     <div class="header">
       <div class="container">
+        <div class="navbar">
 
-        <%# This is the logo at the top of the home page %>
-          <a href="/"><img class="logo" src="https://i.imgur.com/susZNnd.png"/></a>
+          <%# This is the logo at the top of the home page %>
+            <a href="/"><img class="logo" src="https://i.imgur.com/susZNnd.png"/></a>
 
-          <%# This is the searchbar at the top of the home page %>
-            <form id="form">
-              <input type="search" id="query" name="q" placeholder="Search...">
-              <button>Search</button>
-            </form>
-          </div>
-        </div>
-
-        <div class="main">
-          <div class="container">
-            <%# This is the link for login/signup %>
+            <%# This is the searchbar at the top of the home page %>
+              <form id="form" class="d-flex">
+                <input type="search" class="form-control mr-sm-2" id="query" name="q" placeholder="Search...">
+                <button class="btn btn-warning my-2 my-sm-0">Search</button>
+              </form>
 
               <div class="nav pull-right">
                 <% if current_user %>
@@ -34,18 +29,24 @@
                     <li><%= link_to "Log out", logout_path, method: "delete", class: "btn btn-warning" %></li>
                   </ul>
                 <% else %>
-                  <ul>
-                    <li><%= link_to "Signup", 'signup', class: "btn btn-warning" %></a>
-                  </li>
-                </ul>
-              <% end %>
+                  <ul class="d-flex">
+                    <li><%= link_to "Signup", 'signup', class: "btn btn-warning" %></li>
+                    <li><%= link_to "Login", 'login', class: "btn btn-warning" %></li>
+                  </ul>
+                <% end %>
+              </div>
             </div>
-            <%= yield %>
-
           </div>
-        </div>
 
-        <div class="footer">
-          <div class="container">
-          </body>
-        </html>
+          <div class="main">
+            <div class="container">
+              <%# This is the link for login/signup %>
+
+                <%= yield %>
+
+              </div>
+            </div>
+
+            <div class="footer">
+              <div class="container"></body>
+            </html>
