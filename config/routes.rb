@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  root 'albums#index'
+  root 'products#index'
 
-  resources :albums
+  resources :products
   resources :users
 
   get 'signup' => 'users#new'

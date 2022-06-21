@@ -1,0 +1,19 @@
+
+<img src="https://i.imgur.com/CR2RHfw.jpg" alt="A picture of 2 DJs on stage" class="banner-image"/>
+
+
+<div class="row">
+  <%- @products.each do |product| %>
+  <div class="container">
+    <%= link_to(product) do %>
+      <div class="thumbnail">
+        <img src="<%= product.cover%>">
+        <div class="caption">
+          <h3 class="title"><%=product.title%></h3>
+          <p class="price"><%=product.price%></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>

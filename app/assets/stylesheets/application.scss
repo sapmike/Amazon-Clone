@@ -13,6 +13,8 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
 
  .form {
    text-align:center;
@@ -36,11 +38,15 @@
  }
 
  .btn-submit {
-   color: #FFFFFF;
+   color: #FFCC00;
    font-size: 18px;
    text-transform: uppercase;
-   background: #c91717;
+   background: #FFCC00 !important;
    padding: 10px 20px;
    border: 0;
    margin-top: 6px;
+ }
+
+ .btn-warning {
+   margin-right: 10px;
  }

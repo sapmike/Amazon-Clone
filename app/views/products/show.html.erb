@@ -1,0 +1,15 @@
+
+<%= link_to("Products Page", {:action => 'index'}) %>
+
+
+
+<div class="show row">
+  <div class="cover col-md-4"> <img src="<%=@product.cover%>"></div>
+
+  <div class="col-sm-8">
+    <h3 class="product-title"><%= @product.title %></h3>
+    <p class="product-price"><%= @product.price %></p>
+    <p class="product-description"><%= @product.description %></p>
+
+  </div>
+</div>

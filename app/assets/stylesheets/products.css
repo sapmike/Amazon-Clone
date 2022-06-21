@@ -18,9 +18,10 @@ body {
 }
 
 .logo {
-  width: 150px;
+  width: 300px;
   margin: 0px 0;
 }
+
 
 
 /* Main */
@@ -30,16 +31,13 @@ html, body {
 
 .main {
   padding-top: 40px;
-  background-color: #1c1c1e;
-
   min-height: 100%;
   height: auto !important;
   height: 100%;
   margin: 0 auto 0;
   vertical-align: bottom;
+  background-color: white !important;
 }
-
-
 
 
 /* Thumbnail */
@@ -53,83 +51,83 @@ html, body {
   margin: auto;
 }
 
+#banner-image {
+  height: auto;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+}
+
+
+
 img {
     height: auto;
     width: auto;
-    max-width: 500px;
+    max-width: 600px;
     max-height: 500px;
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
-.title,
-.artist {
-  color: #fff;
-  text-align: center;
-}
 
-.title,
-.album-title {
+.title {
   margin: 5px 0 3px 0;
   font-size: 16px;
   font-weight: 500;
 }
 
-.artist,
-.album-artist {
-  color: #c3c3c3;
-  font-size: 12px;
-  font-weight: 200;
-}
 
-/* Track */
+
+/* Product description */
 .show {
   margin: 20px 0;
 }
 
-
-.album-title,
-.album-artist,
-.track .name,
-.track .minutes {
-  color: #fff;
+.product-title,
+.product-price,
+.product-description {
+  color: #ffffff;
 }
 
-.album-title {
+.product-title {
   font-size: 30px;
 }
 
-.album-artist {
+.product-price {
   margin-bottom: 25px;
 }
 
-.track {
+.description {
   margin-top: 10px;
 }
 
-.track:hover {
+.description:hover {
   background: rgba(255,255,255,0.1);
 }
 
-.track .name {
+.description .name {
   font-size: 24px;
   font-weight: 100;
 }
 
-.track .minutes {
+.description .description_facts {
   padding-top: 12px;
   text-align: center;
 }
 
-.track:last-child {
+.description:last-child {
   margin-bottom: 80px;
 }
 
 /* Footer */
 .footer {
   height: auto;
-  background-color: #000;
+  background-color: #ffffff;
   color: #fff;
   padding: 50px 0 35px 0;
 }

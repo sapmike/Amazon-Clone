@@ -13,16 +13,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-a1 = Album.create(cover: "https://i1.sndcdn.com/artworks-eOo2Ge77Obflqr25-AhWRTA-t500x500.jpg", title: "Breaking Hertz EP", artist: "HOWLZ")
-Track.create(name: "BLOCK BUSTER", minutes: 4, album_id: a1.id)
-Track.create(name: "Chop Suey", minutes: 2, album_id: a1.id)
-Track.create(name: "Reckless", minutes: 3, album_id: a1.id)
-
-a2 = Album.create(cover: "https://i.imgur.com/O8R6kMV.png", title: "Singles", artist: "HOWLZ")
-Track.create(name: "Walk Away", minutes: 3, album_id: a2.id)
-Track.create(name: "Caught In Your Whisper", minutes: 3, album_id: a2.id)
-Track.create(name: "UNDERGROUND", minutes: 2, album_id: a2.id)
-
-a3 = Album.create(cover: "https://i.imgur.com/Ho6JtvH.jpeg", title: "Record Label Releases", artist: "HOWLZ")
-Track.create(name: "Evil Deeds", minutes: 3, album_id: a3.id)
-Track.create(name: "Third Eye", minutes: 4, album_id: a3.id)
+a1 = Product.create(cover: "https://i.imgur.com/rNOwsnC.png", title: "Hip-Hop Starter Pack", price: "$19.99", description: "Over 100+ samples to get any party started.")
