@@ -51,23 +51,25 @@ html, body {
   margin: auto;
 }
 
-#banner-image {
-  height: auto;
-  width: 100%;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }
 
-}
 
 
-
-img {
+.banner img {
     height: auto;
     width: auto;
-    max-width: 600px;
+    max-width: 700px;
     max-height: 500px;
     margin-left: auto;
     margin-right: auto;
@@ -82,16 +84,9 @@ img {
 }
 
 
-
 /* Product description */
 .show {
   margin: 20px 0;
-}
-
-.product-title,
-.product-price,
-.product-description {
-  color: #ffffff;
 }
 
 .product-title {
