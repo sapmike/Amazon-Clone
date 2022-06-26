@@ -11,4 +11,9 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
   end
 
+  def search
+    @products = Product.where("title LIKE ?" ,"%" + params[:q] + "%")
+  end
+
+
 end
