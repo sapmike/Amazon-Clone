@@ -1,6 +1,12 @@
 <h1 style="color: white;"> Search Results </h1>
 <br>
 
+<div class="span6 pull-right" style="text-align:right">
+  <%= link_to("Products Page", {:action => 'index'}) %>
+</div>
+
+
+
 
 <%-@products.each do |product| %>
 <%= link_to(product) do %>

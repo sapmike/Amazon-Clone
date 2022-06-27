@@ -13,7 +13,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-a1 = Product.create(cover: "https://i.imgur.com/rNOwsnC.png", title: "Hip-Hop Starter Pack", price: "$19.99", description: "So many factors go into creating incredible Hip-Hop music, but it all starts with having clean and professional samples. The result was a pack filled with breathtaking sounds that can be used to instantly enhance your tracks and give you a clean mix.")
+a1 = Product.create(cover: "https://cdn.shopify.com/s/files/1/0129/7698/0032/files/min-2022.png?v=1641244947", title: "2022 Melody Collection", price: "$19.99", description: "The focus of the 2022 Collection is modern, placement ready melodies - Trap, RnB, Drill and various loops that are so unique they don’t even fit into any genre. You’ll find tons of inspiring melodies and vibes inside the 2022 Collection, with 150+ loops including their tracked-out stems and MIDI. There’s 6 different style categories of melodies inside, giving you tons of variety to work with when creating your next big record.")
 
 a2 = Product.create(cover: "https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-prism-edm-sample-pack_940x1530.png?v=1628536117", title: " Prism EDM Sample Pack", price: "$14.99", description: "Prism is a new sample library that perfectly encapsulates the sound of the new wave of EDM that has taken over. Prism focuses on melodic EDM including House, Future Bass, and some experimental samples that will keep you inspired for months.")
 
