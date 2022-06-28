@@ -1,15 +1,15 @@
-<!-- attempt to make banner image to fill div -->
-
-<div class="jumbotron jumbotron-fluid">
-  <div class="container-fluid">
-    <img src="https://i.imgur.com/CR2RHfw.jpg" alt="2 DJs on stage" style="width:100%;max-height:100%;"/>
-  </div>
+<!-- attempt to make banner image to fill header div -->
+<div id="header-image-menu">
+        <img src="https://i.imgur.com/CR2RHfw.jpg" style="top: 10px; position"/>
 </div>
 
+
+
 <br>
 <br>
 <br>
-<h6 style="color: white;">
+
+<h6 style="color:white; text-align:center">
   2022 Melody Collection OUT NOW!</h6>
 <iframe
   width="100%"
@@ -24,13 +24,16 @@
   ·
   <a href="https://soundcloud.com/cymaticsfm/cymatics-2022-melody-collection" title="2022 Melody Collection (OUT JAN 21)" target="_blank" style="color: #cccccc; text-decoration: none;">2022 Melody Collection (OUT JAN 21)</a>
 </div>
+
 <br>
 <br>
 <br>
 
-<div class="product-list" style="display:grid; grid-template-columns:repeat(3, 1fr)">
+<!-- utilizing CSS Grid here, inline styling due to CSS sheet not registering-->
+
+<div class="product-list" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:15px;">
   <%-@products.each do |product| %>
-    <div class="product card text-center border-white" style="width:200px">
+    <div class="product card text-center border-white" style="width:200px; background-color:transparent;">
       <%= link_to(product) do %>
       <img class="card-img-top" src="<%= product.cover%>" alt="Sample Pack Picture">
       <div class="card-body">
