@@ -29,7 +29,10 @@ html, body {
   height: 100%;
 }
 
+.product-list {
+  display:grid;
 
+}
 
 .main {
   padding-top: 40px;
