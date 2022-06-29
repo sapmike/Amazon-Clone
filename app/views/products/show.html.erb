@@ -8,9 +8,9 @@
   </div>
 
   <div class="col-sm-8">
-    <h3 class="product-title" style="color:silver;"><%= @product.title %></h3>
-    <p class="product-price" style="color:silver;"><%= @product.price %></p>
+    <h3 class="product-title" style="color:silver;"><%=@product.title %></h3>
     <p class="product-description" style="color:silver;"><%= @product.description %></p>
-
+    <p class="product-price" style="color:silver; text-decoration:line-through;">List Price: <%= @product.price %></p>
+    <p class="product-actual-price" style="color:red;">Our Price: $<%= @product.actual_price%></p>
   </div>
 </div>
