@@ -12,22 +12,24 @@
     No results found ;(
   </h2>
 <%else%>
-  <%-@products.each do |product| %>
+<div class="product-list" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(200px, 1fr)); gap:15px;">
+<%-@products.each do |product| %>
+  <div class="product card text-center border-white" style="width:200px; background-color:transparent;">
     <%= link_to(product) do %>
-    <div class="card-deck"
-      <div class="card">
-      <div class="col-sm-4 d-flex justify-content-center">
-      <div class="card text-center" style="width: 18rem; background-color:transparent;">
-      <img class="card-img-top" src="<%= product.cover%>" alt="Sample Pack Picture">
-      <div class="card-body">
-      <h5 class="card-title"><%=product.title%></h5>
-      <p class="card-text"><%=product.price%></p>
+    <img class="card-img-top" src="<%= product.cover%>" alt="Sample Pack Picture">
+    <div class="card-body">
+      <h5 class="card-title" style="color:white; text-decoration:none"><%=product.title%></h5>
+      <p class="card-text" style="color:white;text-decoration:none">$<%=product.actual_price%></p>
       <a href="#" class="btn btn-warning">Add To Cart</a>
-       </div>
-      </div>
-     <%end%>
     </div>
-   </div>
-  <%end%>
- </div>
+   <%end%>
+  </div>
+<%end%>
+
+
+
+
+
+
+
 <%end%>
