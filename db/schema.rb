@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_29_003508) do
+ActiveRecord::Schema[7.0].define(version: 2022_06_30_172933) do
   create_table "albums", force: :cascade do |t|
     t.string "cover"
     t.string "title"
@@ -26,6 +26,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_003508) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["product_id"], name: "index_descriptions_on_product_id"
+  end
+
+  create_table "order_items", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "order_id"
+    t.string "integer"
+    t.integer "product_id"
+    t.integer "quantity"
+    t.decimal "unit_price"
+    t.decimal "total"
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "subtotal"
   end
 
   create_table "products", force: :cascade do |t|
