@@ -26,15 +26,17 @@
               </form>
 
 
-              <div class="nav pull-right" style="position:relative;top:10px;">
+              <div class="nav pull-right" style="position:relative;top:20px;">
                 <% if current_user %>
                   <ul>
-                    <li><%= link_to "Log out", logout_path, method: "delete", class: "btn btn-warning" %></li>
+                    <%= link_to "Log out", logout_path, method: "delete", class: "btn btn-warning", style: "position:relative;bottom:10px;left:340px" %></li>
+                    <%= link_to "Account: (#{current_user.email})", cart_path, {:style=>'position:relative;right:70px;top:35px;'} %>
+                    <%= link_to "My Cart (#{current_order.order_items.size})", cart_path, {:style=>'position:relative;top:35px;right:0px'} %>
                   </ul>
                 <% else %>
                   <ul class="d-flex">
-                    <li><%= link_to "Signup", 'signup', class: "btn btn-warning" %></li>&nbsp;
-                    <li><%= link_to "Login", 'login', class: "btn btn-warning" %></li>&nbsp;
+                    <li><%= link_to "Signup", 'signup', class: "btn btn-warning", style: "position:relative;bottom:10px;" %></li>&nbsp;
+                    <li><%= link_to "Login", 'login', class: "btn btn-warning", style: "position:relative;bottom:10px;" %></li>&nbsp;
                   </ul>
                 <% end %>
               </div>
@@ -44,7 +46,6 @@
             <a id="nothing" style="text-decoration:none; font-family:Verdana;" href="#">Products</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a id="nothing" style="text-decoration:none;font-family:Verdana;" href="#">Best Sellers</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a id="nothing" style="text-decoration:none;font-family:Verdana;" href="#">New Releases</a>&nbsp;&nbsp;&nbsp;&nbsp;
-            <%= link_to "My Cart (#{current_order.order_items.size})", cart_path, {:style=>'position:relative;left:740px'} %>
           </div>
 
           <div class="main">
@@ -52,10 +53,9 @@
               <%# This is the link for login/signup %>
 
                 <%= yield %>
-
+                <br><br>
               </div>
             </div>
-
             <div class="footer">
               <div class="container">
                 <div class="col-md-2">
