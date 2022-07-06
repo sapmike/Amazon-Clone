@@ -4,7 +4,14 @@ class OrderItemsController < ApplicationController
   protect_from_forgery with: :null_session
 
 
+#    def index
+#      @user = current_user
+#      @order_item = @user.order_items
+#    end
+
+
   def create
+#    @user = User.find(params[:id]
     @order_item = @order.order_items.new(order_params)
     @order.save
     session[:order_id] = @order.id

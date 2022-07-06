@@ -1,3 +1,8 @@
+<div class="span6 pull-right" style="text-align:right;position:relative;top:33px;">
+  <%= link_to("Continue Shopping", products_url) %>
+</div>
+
+
 <% @order_items.each do |item| %>
   <h3 style="color:white;"><%= item.product.title%></h3>
   <h4 style="color:white;">$<%=item.product.actual_price %></h4>
