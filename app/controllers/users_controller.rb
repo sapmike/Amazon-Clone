@@ -11,8 +11,10 @@ class UsersController < ApplicationController
   if @user.save
     session[:user_id] = @user.id
     redirect_to '/'
+    flash[:notice] = "Account successfully created"
   else
     redirect_to '/signup'
+    flash[:alert] = "Invalid data in one or more fields"
     end
   end
 
