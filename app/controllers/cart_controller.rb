@@ -1,6 +1,6 @@
 class CartController < ApplicationController
 
-#requires user to have an account and be signed in to be able to add to cart
+#requires user to have an account and be signed in to be able to see cart 
 before_action :require_user, only:[:show]
 
   def show

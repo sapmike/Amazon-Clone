@@ -17,7 +17,7 @@ a1 = Product.create(cover: "https://cdn.shopify.com/s/files/1/0129/7698/0032/fil
 
 a2 = Product.create(cover: "https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-prism-edm-sample-pack_940x1530.png?v=1628536117", title: " Prism EDM Sample Pack", price: "$14.99", actual_price: 9.99, description: "Prism is a new sample library that perfectly encapsulates the sound of the new wave of EDM that has taken over. Prism focuses on melodic EDM including House, Future Bass, and some experimental samples that will keep you inspired for months.")
 
-a3 = Product.create(cover: "https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-web-flavor_940x1530.png?v=1605842206", title: "Flavor Drum Loops", price: "$19.99", actual_price: 14.99, description: "FLAVOR is packed full and top drum loops, all unconventional and perfect for creating a unique identity in your music.")
+a3 = Product.create(cover: "https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-web-flavor_940x1530.png?v=1605842206", title: "Flavor Drum Loop Samples", price: "$19.99", actual_price: 14.99, description: "FLAVOR is packed full and top drum loops, all unconventional and perfect for creating a unique identity in your music.")
 
 a4 = Product.create(cover: "https://cdn.shopify.com/s/files/1/0129/7698/0032/products/min-bf-memories_940x1530.png?v=1606152286", title: "Vintage Sample Pack", price: "$24.99", actual_price: 19.99, description: "Inside you’ll find 250+ samples, including the following: Drum & shaker loops, Over 50 synth/instruments one shots, Live recorded drum one shots, Ambient tape loops, Melodies inspired by the art of crate digging & much more!")
 

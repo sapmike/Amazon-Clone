@@ -1,4 +1,5 @@
 class OrderItem < ApplicationRecord
+# belongs_to :user 
   belongs_to :product
   belongs_to :order
   before_save :set_unit_price

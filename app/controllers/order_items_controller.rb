@@ -22,7 +22,7 @@ class OrderItemsController < ApplicationController
     @order_item.update(order_params)
     @order_items = current_order.order_items
     redirect_to cart_path
-    # would we want to instead redirect_to cart_path ??
+    flash[:notice] = "Shopping cart was successfully updated"
   end
 
   def destroy
@@ -30,7 +30,7 @@ class OrderItemsController < ApplicationController
     @order_item.destroy
     @order_items = current_order.order_items
     redirect_to cart_path
-    # would we want to instead redirect_to cart_path ??
+    flash[:alert] = "Shopping cart was deleted"
   end
 
 
