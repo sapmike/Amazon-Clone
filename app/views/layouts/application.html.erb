@@ -29,18 +29,19 @@
               <div class="nav pull-right" style="position:relative;top:20px;">
                 <% if current_user %>
                   <ul>
-                    <%= link_to "Log out", logout_path, method: "delete", class: "btn btn-warning", style: "position:relative;bottom:10px;left:340px" %></li>
-                    <%= link_to "Account: (#{current_user.email})", cart_path, {:style=>'position:relative;right:70px;top:35px;'} %>
+                    <%= link_to "Log out", logout_path, method: "delete", class: "btn btn-warning", style: "position:relative;bottom:10px;left:211px" %></li>
+                    <%= link_to "Account Settings", edit_user_path(current_user), {:style=>'position:relative;right:70px;top:35px;'} %>
                     <%= link_to "My Cart (#{current_order.order_items.size})", cart_path, {:style=>'position:relative;top:35px;right:0px'} %>
                   </ul>
                 <% else %>
                   <ul class="d-flex">
-                    <li><%= link_to "Signup", 'signup', class: "btn btn-warning", style: "position:relative;bottom:10px;" %></li>&nbsp;
-                    <li><%= link_to "Login", 'login', class: "btn btn-warning", style: "position:relative;bottom:10px;" %></li>&nbsp;
+                    <li><%= link_to "Signup", '/signup', class: "btn btn-warning", style: "position:relative;bottom:10px;" %></li>&nbsp;
+                    <li><%= link_to "Login", '/login', class: "btn btn-warning", style: "position:relative;bottom:10px;" %></li>&nbsp;
                   </ul>
                 <% end %>
               </div>
           </div>
+
 
             <a id="nothing" style="font-weight:bold; color:white; text-decoration:none; font-family:Verdana;" href="#">Departments</a>&nbsp;&nbsp;&nbsp;&nbsp;
             <a id="nothing" style="text-decoration:none; font-family:Verdana;" href="#">Products</a>&nbsp;&nbsp;&nbsp;&nbsp;

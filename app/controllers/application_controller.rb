@@ -20,7 +20,4 @@ class ApplicationController < ActionController::Base
     redirect_to '/login' unless current_user
   end
 
-# def current_cart
-#    current_user.current_cart if current_user.present?
-#  end
 end

@@ -20,7 +20,7 @@ RSpec.describe "Products Index Page" do
 
   it "Should take me to product show page when image clicked" do
 
-        visit '/prodcuts'
+        visit '/products'
 
         within "#item-#{@trap_starter_pack.id}" do
           find("#img-#{@trap_starter_pack.id}").click

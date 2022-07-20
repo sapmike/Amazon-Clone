@@ -1,0 +1,18 @@
+
+<!-- #add field for shipping address and other stuff. Need to figure out how to
+edit the checkout stuff on stripe. Need to change the decimal place on final amount -->
+
+  <form action="/" method="POST">
+      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="pk_test_51LKoqWDqoMx2ACc5toIkFaJPv6V2PST6DfkaLaNaQeoVZvSGy5nOo99HyOPq4BHpUyuI0vUBEokSAj4EKMV7Ykj400fMwo4bmx"
+          data-amount="<%= current_order.subtotal * 100 %>"
+          data-name="Checkout"
+          data-shipping-address="true"
+          data-image="https://i.imgur.com/susZNnd.png"
+          data-locale="auto">
+      </script>
+      <script>
+          document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+      </script>
+      <button type="submit" class="yourCustomClass">Checkout</button>
+  </form>

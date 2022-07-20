@@ -3,7 +3,7 @@ class OrderItemsController < ApplicationController
 
   protect_from_forgery with: :null_session
 
-
+# This would be good to keep for orders page in future
 #    def index
 #      @user = current_user
 #      @order_item = @user.order_items
@@ -11,7 +11,6 @@ class OrderItemsController < ApplicationController
 
 
   def create
-#    @user = User.find(params[:id]
     @order_item = @order.order_items.new(order_params)
     @order.save
     session[:order_id] = @order.id
@@ -30,7 +29,7 @@ class OrderItemsController < ApplicationController
     @order_item.destroy
     @order_items = current_order.order_items
     redirect_to cart_path
-    flash[:alert] = "Shopping cart was deleted"
+    flash[:alert] = "Shopping cart items deleted"
   end
 
 

@@ -4,8 +4,6 @@ class UsersController < ApplicationController
     @users = User.new
   end
 
-
-
   def create
     @user = User.new(user_params)
   if @user.save
@@ -19,9 +17,39 @@ class UsersController < ApplicationController
   end
 
 
+  def edit
+    @user = User.find(params[:id])
+  end
+
+
+  def update_password
+   @user = current_user
+   @user.update(update_pass_params)
+   if @user.save
+     flash[:notice] = "Password successfully updated"
+     redirect_to edit_user_path
+   else
+     flash[:alert] = "Password was not updated"
+     redirect_to edit_user_path
+   end
+  end
+
+
+  def destroy
+   @user = User.find(params[:id])
+   @user.orders.clear
+   @user.destroy
+   flash[:notice] = "Account successfully deleted"
+   redirect_to '/'
+  end
+
 private
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password)
+  end
+
+  def update_pass_params
+    params.permit(:password)
   end
 end

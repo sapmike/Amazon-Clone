@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_07_130436) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_11_143632) do
   create_table "order_items", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -26,6 +26,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_07_130436) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "subtotal"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
   create_table "products", force: :cascade do |t|
@@ -47,4 +49,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_07_130436) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "orders", "users"
 end

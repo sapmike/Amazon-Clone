@@ -1,15 +1,17 @@
 <div class="span6 pull-right" style="text-align:right;position:relative;top:33px;">
   <%= link_to("Continue Shopping", products_url) %>
 </div>
-
-
+<h1 style="color:orange;"><strong>Shopping Cart</h1>
+<br>
+<br>
+<br>
 <% @order_items.each do |item| %>
   <h3 style="color:white;"><%= item.product.title%></h3>
   <h4 style="color:white;">$<%=item.product.actual_price %></h4>
   <%= form_with model: item do |f| %>
   <%= f.hidden_field :product_id, value: item.product.id %>
   <%= f.number_field :quantity, value: item.quantity.to_i%>
-  <h5 style="position:relative;left:187px;bottom:30px;"><%= f.submit "Update Cart" %></h5>
+  <h5 style="position:relative;left:190px;bottom:30px;"><%= f.submit "Update Cart" %></h5>
   <% end %>
 <h4 style="color:white;">Subtotal: $<%= item.total %></h4>
 <h5 style="position:relative;left:320px;bottom:105px;"><%= button_to "Remove Items", item, url: order_item_path(item), method: "delete" %></h5>
@@ -18,3 +20,5 @@
 <br>
 <% end %>
 <h3 style="color:white;">Your current order has a total of: $<%= current_order.subtotal %></h3>
+
+<script src="https://js.stripe.com/v3/"></script>

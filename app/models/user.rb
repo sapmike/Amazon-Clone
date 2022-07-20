@@ -1,12 +1,10 @@
 class User < ApplicationRecord
   has_secure_password
-# has_one :order
+  has_many :orders
 
-# def current_cart
-#   if self.cart.empty?
-#     self.cart.create!
-#   end
-#   self.cart
-# end
+  validates_presence_of  :first_name,
+                         :last_name,
+                         :email,
+                         :password_digest
 
 end
