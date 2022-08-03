@@ -96,6 +96,9 @@ GEM
       reline (>= 0.2.7)
     diff-lcs (1.5.0)
     digest (3.1.0)
+    erd (0.8.1)
+      nokogiri
+      ruby-graphviz
     erubi (1.10.0)
     execjs (2.8.1)
     factory_bot (6.2.1)
@@ -149,6 +152,7 @@ GEM
     nokogiri (1.13.6)
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
+    pg (1.4.2)
     popper_js (2.9.3)
     public_suffix (4.0.7)
     puma (5.6.4)
@@ -205,6 +209,8 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
+    ruby-graphviz (1.2.5)
+      rexml
     rubyzip (2.3.2)
     sassc (2.4.0)
       ffi (~> 1.9)
@@ -265,10 +271,12 @@ DEPENDENCIES
   bootstrap
   capybara
   debug
+  erd
   factory_bot_rails
   importmap-rails
   jbuilder
   jsbundling-rails
+  pg
   puma (~> 5.0)
   rails (~> 7.0.2, >= 7.0.2.4)
   rspec-rails (~> 5.1)
