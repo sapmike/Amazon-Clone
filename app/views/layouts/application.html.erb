@@ -9,6 +9,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+    <script src="https://js.stripe.com/v3/"></script>
   </head>
 
   <body>
@@ -26,9 +27,9 @@
               </form>
 
 
-              <div class="nav pull-right" style="position:relative;top:20px;">
+              <div class="responsive" style="position:relative;top:20px;">
                 <% if current_user %>
-                  <ul>
+                  <ul class="d-flex">
                     <%= link_to "Log out", logout_path, method: "delete", class: "btn btn-warning", style: "position:relative;bottom:10px;left:211px" %></li>
                     <%= link_to "Account Settings", edit_user_path(current_user), {:style=>'position:relative;right:70px;top:35px;'} %>
                     <%= link_to "My Cart (#{current_order.order_items.size})", cart_path, {:style=>'position:relative;top:35px;right:0px'} %>

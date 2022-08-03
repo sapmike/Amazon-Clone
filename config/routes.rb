@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   get 'logout' => 'sessions#destroy'
   get 'search' => 'products#search'
   post '/cart' => 'order_items#destroy'
-
+  post 'checkout/create' => 'checkout#create', as: "checkout_create"
+  delete '/logout' => 'sessions#destroy'
 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html

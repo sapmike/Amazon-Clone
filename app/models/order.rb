@@ -8,7 +8,9 @@ class Order < ApplicationRecord
     order_items.collect {|order_item| order_item.valid? ? order_item.unit_price * order_item.quantity : 0}.sum
   end
 
-  private
+
+
+private
 
   def set_subtotal
     self[:subtotal] = subtotal
