@@ -9,9 +9,9 @@ RSpec.describe 'When I visit an items show page' do
 
 
   describe 'As a visitor, non-logged in user' do
-      it "I don't see 'My Cart' feature to add this item to my cart" do
+      it "won't have the ability to add product to cart" do
         visit "/products/#{@trap_starter_pack.id}"
-        expect(page).to have_button("Add To Cart")
+        expect(page).to_not have_button("Add To Cart")
       end
 
       it "I can't add this item to my cart" do
@@ -26,7 +26,8 @@ RSpec.describe 'When I visit an items show page' do
     default_user = User.create(   first_name: "Michael",
                                last_name: "Sapienza",
                                email: "sapmike16@yahoo.com",
-                               password: "ilovesamplepacks")
+                               password: "ilovesamplepacks",
+                               password_confirmation: "ilovesamplepacks")
 
 
     describe 'if user is logged in' do

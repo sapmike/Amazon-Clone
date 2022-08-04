@@ -6,7 +6,8 @@ RSpec.describe 'When I signout', type: :feature do
      default_user = User.create(   first_name: "Michael",
                                 last_name: "Sapienza",
                                 email: "sapmike16@yahoo.com",
-                                password: "ilovesamplepacks")
+                                password: "ilovesamplepacks",
+                                password_confirmation: "ilovesamplepacks")
 
 
      visit '/login'

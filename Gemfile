@@ -28,7 +28,6 @@ gem "jbuilder"
 
 gem "bootstrap"
 
-gem 'jsbundling-rails'
 
 gem 'stripe'
 

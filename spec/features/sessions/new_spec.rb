@@ -2,10 +2,11 @@ require 'rails_helper'
 
 RSpec.describe 'As a visitor', type: :feature do
   before(:each) do
-    @user = User.create(       first_name: "Michael",
+    @user = User.create(        first_name: "Michael",
                                 last_name: "Sapienza",
+                                email: "sapmike16@yahoo.com",
                                 password: "ilovesamplepacks",
-                                email: "sapmike16@yahoo.com")
+                                password_confirmation: "ilovesamplepacks")
   end
 
   describe 'When I visit the login path' do

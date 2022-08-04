@@ -15,6 +15,8 @@ RSpec.describe 'Creating a new user', type: :feature do
     fill_in "Last Name", with: "Sapienza"
     fill_in "Email", with: "ilovesamplepacks@email.com"
     fill_in "Password", with: "samplepacksrule"
+    fill_in "Password Confirmation", with: "samplepacksrule"
+
 
     click_on "Create an account"
 
@@ -38,4 +40,4 @@ RSpec.describe 'Creating a new user', type: :feature do
   end
 end
 
-#tests are passing 
+#tests are passing
