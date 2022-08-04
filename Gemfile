@@ -28,8 +28,6 @@ gem "jbuilder"
 
 gem "bootstrap"
 
-gem 'jsbundling-rails'
-
 gem 'stripe'
 
 # Use Redis adapter to run Action Cable in production

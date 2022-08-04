@@ -2,13 +2,10 @@
 <html>
   <head>
     <title>Samplezon</title>
-    <link rel="stylesheet" href="style.css"/>
-    <link rel="stylesheet" href="http://content.codecademy.com/projects/bootstrap.min.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,500' rel='stylesheet' type='text/css'>
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
     <%= csrf_meta_tags %>
-    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <script src="https://js.stripe.com/v3/"></script>
   </head>
 
@@ -18,7 +15,7 @@
         <div class="navbar">
 
           <%# This is the logo at the top of the home page %>
-            <a href="/"><img class="logo" src="https://i.imgur.com/susZNnd.png"/></a>
+            <a href="/"><%= image_tag("samplezon.png", class: "logo") %></a>
 
             <%# This is the searchbar at the top of the home page %>
               <form id="form" class="d-flex" action="/search">
