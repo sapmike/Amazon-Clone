@@ -25,5 +25,3 @@ RSpec.describe 'When I signout', type: :feature do
      expect(page).to have_content("Logged out successfully")
    end
  end
-
-#finished

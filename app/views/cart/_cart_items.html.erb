@@ -10,19 +10,22 @@
   <h3 style="color:white;"><%= item.product.title%></h3>
   <h4 style="color:white;">$<%=item.product.actual_price %></h4>
   <%= form_with model: item do |f| %>
-  <%= f.hidden_field :product_id, value: item.product.id %>
-  <%= f.number_field :quantity, value: item.quantity.to_i%>
-  <h5 style="position:relative;left:190px;bottom:30px;"><%= f.submit "Update Cart" %></h5>
+    <%= f.hidden_field :product_id, value: item.product.id %>
+    <%= f.number_field :quantity, value: item.quantity.to_i%>
+    <h5 style="position:relative;left:190px;bottom:30px;"><%= f.submit "Update Cart" %></h5>
   <% end %>
-<h5 style="position:relative;left:320px;bottom:68px;"><%= button_to "Remove Items", item, url: order_item_path(item), method: "delete" %></h5>
-<h4 style="color:white;">Subtotal: $<%= item.total %></h4>
-<br>
-<br>
-<br>
-<%= button_to "Submit Payment",checkout_create_path, params: {:item_id => item.id } %>
+  <h5 style="position:relative;left:320px;bottom:68px;"><%= button_to "Remove Items", item, url: order_item_path(item), method: "delete" %></h5>
+  <h4 style="color:white;">Subtotal: $<%= item.total %></h4>
+  <br>
+  <br>
+  <br>
 <% end %>
-<h3 style="color:white;">Your current order has a total of: $<%= current_order.subtotal %></h3>
-<br>
-<br>
 
-<!-- <script src="https://js.stripe.com/v3/"></script> -->
+<%if current_order.subtotal > 0 %>
+<%= button_to "Submit Payment",checkout_create_path %>
+
+<%else%>
+
+<%end%>
+
+<h3 style="color:white;">Your current order has a total of: $<%= current_order.subtotal %></h3>

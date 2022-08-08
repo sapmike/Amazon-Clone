@@ -1,8 +1,6 @@
 class CheckoutController < ApplicationController
 
 
-  price_id = '{{PRICE_ID}}'
-
   def create
     @session = Stripe::Checkout::Session.create({
 
@@ -68,6 +66,9 @@ class CheckoutController < ApplicationController
       customer_email: current_user.email,
     })
 
+#   respond_to do |format|
+#      format.js
+#    end
     redirect_to @session.url, allow_other_host: true
   end
 end

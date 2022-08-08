@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'When I visit an items show page' do
+RSpec.describe 'When I visit an items show page', type: :feature do
 
   before(:each) do
 
