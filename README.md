@@ -24,11 +24,11 @@ Samplezon is a eCommerce platform where users can create an account and add samp
 * Utilize Partials to DRY up code
 
 # Screenshots 
-## Home Page
+***Home Page***
 ![image](https://user-images.githubusercontent.com/104168733/183712674-1c3eceb7-3291-4291-86a2-e048aa1ff264.png)
 
-## Product Show Page
+***Product Show Page***
 ![image](https://user-images.githubusercontent.com/104168733/183712744-fce62226-3611-4822-9fd0-aeb66576c0b1.png)
 
-## Shopping Cart 
+***Shopping Cart***
 ![image](https://user-images.githubusercontent.com/104168733/183712805-d195aba8-6f49-4c6b-96fa-8a0da6fa9783.png)
