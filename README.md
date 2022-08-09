@@ -9,16 +9,17 @@ Samplezon is a eCommerce platform where users can create an account and add samp
 ![image](https://user-images.githubusercontent.com/104168733/183706255-e96f3ae4-ab33-44a1-ae4b-7b12de0dd9a2.png)
 
 # Learning Goals 
-One-to-Many, Many-to-Many Relationships
-Schema Design
-Authentication 
-BCrypt for hashing user passwords
-Namespaced Routes
-ActiveRecord
-Join Multiple tables of data
-Calculate statistics
-Create Collections of Data grouped by one or more attributes
-Login/Logout Functionality
-Store some user information in Sessions
-Rails
-Utilize Partials to DRY up code
+Markup : 
+* One-to-Many, Many-to-Many Relationships
+* Schema Design
+* Authentication 
+* BCrypt for hashing user passwords
+* Namespaced Routes
+* ActiveRecord
+* Join Multiple tables of data
+* Calculate statistics
+* Create Collections of Data grouped by one or more attributes
+* Login/Logout Functionality
+* Store some user information in Sessions
+* Rails
+* Utilize Partials to DRY up code
